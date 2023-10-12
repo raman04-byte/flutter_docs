@@ -21,14 +21,12 @@ class _AppBarIconState extends State<AppBarIcon> {
         cursor: SystemMouseCursors.click,
         onEnter: (event) {
           setState(() {
-            
-          isHovered = true;
+            isHovered = true;
           });
         },
         onExit: (event) {
           setState(() {
-            
-          isHovered = false;
+            isHovered = false;
           });
         },
         child: Icon(
