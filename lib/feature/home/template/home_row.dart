@@ -1,4 +1,5 @@
 import 'package:anim_search_bar/anim_search_bar.dart';
+import 'package:docs_flutter/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:simple_icons/simple_icons.dart';
@@ -133,7 +134,8 @@ class _HomeRowState extends State<HomeRow> {
               width: Dimensions.scaleW(30),
               alignment: Alignment.center,
               decoration: const BoxDecoration(
-                color: Color(0xFF1389fd),
+                // color: AppColor.imageBackColor,
+                color: AppColor.buttonColor,
               ),
               child: Text(
                 "Get started",
