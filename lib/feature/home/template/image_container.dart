@@ -23,6 +23,7 @@ class _ImageContainerState extends State<ImageContainer> {
       color: AppColor.imageBackColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.min,
         children: [
           RotatedBox(
             quarterTurns: 2,
@@ -39,75 +40,70 @@ class _ImageContainerState extends State<ImageContainer> {
             child: Column(
               children: [
                 Text(
-                  "Flutter 3.13 scroll into view!",
+                  "SuperDash is the new Flutter + Flame game and example.",
                   style: TextStyle(
                       color: Colors.white, fontSize: Dimensions.scaleH(18)),
                 ),
                 SizedBox(
                   height: Dimensions.scaleH(5),
                 ),
-                RichText(
-                  text: TextSpan(children: [
-                    TextSpan(
-                        text: 'Check out the ',
+                SelectableText.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                          text: 'Learn ',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: Dimensions.scaleH(18))),
+                      TextSpan(
+                        mouseCursor: SystemMouseCursors.click,
+                        onEnter: (_) {
+                          setState(() {
+                            isHovering1 = true;
+                          });
+                        },
+                        onExit: (_) {
+                          setState(() {
+                            isHovering1 = false;
+                          });
+                        },
+                        text: 'how SuperDash was built in under 6 weeks ',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: Dimensions.scaleH(18))),
-                    TextSpan(
-                      mouseCursor: SystemMouseCursors.click,
-                      onEnter: (_) {
-                        setState(() {
-                          isHovering1 = true;
-                        });
-                      },
-                      onExit: (_) {
-                        setState(() {
-                          isHovering1 = false;
-                        });
-                      },
-                      text: 'announcement ',
-                      style: TextStyle(
-                        color: const Color(0xFF94dcf9),
-                        fontSize: Dimensions.scaleH(18),
-                        decoration: isHovering1
-                            ? TextDecoration.underline
-                            : TextDecoration.none,
+                          color: const Color(0xFF94dcf9),
+                          fontSize: Dimensions.scaleH(18),
+                          decoration: isHovering1
+                              ? TextDecoration.underline
+                              : TextDecoration.none,
+                        ),
                       ),
-                    ),
-                    TextSpan(
-                        text: 'and the ',
+                      TextSpan(
+                          text: 'and play the game on iOS, Android, or ',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: Dimensions.scaleH(18))),
+                      TextSpan(
+                        mouseCursor: SystemMouseCursors.click,
+                        onEnter: (_) {
+                          setState(() {
+                            isHovering2 = true;
+                          });
+                        },
+                        onExit: (_) {
+                          setState(() {
+                            isHovering2 = false;
+                          });
+                        },
+                        text: 'web',
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: Dimensions.scaleH(18))),
-                    TextSpan(
-                      mouseCursor: SystemMouseCursors.click,
-                      onEnter: (_) {
-                        setState(() {
-                          isHovering2 = true;
-                        });
-                      },
-                      onExit: (_) {
-                        setState(() {
-                          isHovering2 = false;
-                        });
-                      },
-                      text: 'what\'s new',
-                      style: TextStyle(
-                        color: const Color(0xFF94dcf9),
-                        fontSize: Dimensions.scaleH(18),
-                        decoration: isHovering2
-                            ? TextDecoration.underline
-                            : TextDecoration.none,
+                          color: const Color(0xFF94dcf9),
+                          fontSize: Dimensions.scaleH(18),
+                          decoration: isHovering2
+                              ? TextDecoration.underline
+                              : TextDecoration.none,
+                        ),
                       ),
-                    ),
-                    TextSpan(
-                      text: ' page',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: Dimensions.scaleH(18),
-                      ),
-                    ),
-                  ]),
+                    ],
+                  ),
                 )
               ],
             ),
