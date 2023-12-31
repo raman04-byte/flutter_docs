@@ -23,7 +23,6 @@ class _ImageContainerState extends State<ImageContainer> {
       color: AppColor.imageBackColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        mainAxisSize: MainAxisSize.min,
         children: [
           RotatedBox(
             quarterTurns: 2,
